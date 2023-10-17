@@ -4,6 +4,10 @@ const Scraper = require('@yimura/scraper').default;
 const app = express();
 const port = 3000;
 
+app.get('/', (req, res) => {
+  res.send("hello word");
+});
+
 app.get('/getListOfVideos', (req, res) => {
   try {
     const { song, artist } = req.query;
